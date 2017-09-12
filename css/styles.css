@@ -1,0 +1,1131 @@
+html,
+body {
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header {
+    min-height: 70px;
+    background: url("../img/barbershop-index.jpg") repeat #000000;
+    font-size: 0;
+    color: #ffffff;
+}
+
+.main-content {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background: url("../img/tint.jpg") no-repeat #000000;
+    background-size: cover;
+}
+
+.main-navigation {
+    float: left;
+    width: 780px;
+}
+
+.main-menu li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.main-menu span {
+    display: block;
+    padding: 23px 20px;
+}
+
+.main-menu a {
+    padding: 23px 20px;
+    display: block;
+    font-size: 16px;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.main-menu a:hover {
+    background: #242424;
+}
+
+.logo-image {
+    padding-top: 22px;
+    padding-bottom: 2px;
+    display: block;
+    float: left;
+}
+
+.user-block {
+    float: right;
+    max-width: 140px;
+}
+
+.login:hover {
+    background: #242424;
+}
+
+.login {
+    color: #ffffff;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 50px;
+    padding-right: 20px;
+    position: relative;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.login::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: url(../img/spritesheet.png) no-repeat -10px -10px;
+    top: 28px;
+    left: 20px;
+    opacity: 0.3;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.login:hover::before {
+    opacity: 1;
+}
+
+.pop-up {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    width: 300px;
+    background: url("../img/barbershop-price.jpg") repeat #f6f3f0;
+    padding: 50px 80px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -230px;
+    -webkit-box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 30;
+}
+
+.pop-up-active {
+    display: block;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    100% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    100% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+
+.pop-up-error {
+    -webkit-animation: bounce 0.6s;
+    animation: bounce 0.6s;
+}
+
+.pop-up h2 {
+    padding-bottom: 20px;
+    margin: 0;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.pop-up a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.pop-up p {
+    padding-bottom: 14px;
+    margin: 0;
+}
+
+.pop-up .entry {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.modal-close {
+    border: none;
+    outline: none;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 0;
+    top: 0;
+    right: -34px;
+    background-color: transparent;
+}
+
+.modal-close::after,
+.modal-close::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: #d1d1d1;
+    top: 10px;
+    left: 2px;
+}
+
+.modal-close::after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.modal-close::before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.pop-up input {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    color: #000000;
+    width: 241px;
+    margin: 0;
+    margin-bottom: 10px;
+    outline: none;
+    border: 2px solid #000000;
+    padding: 7px 15px;
+    padding-right: 40px;
+    border-radius: 3px;
+    vertical-align: top;
+    text-transform: none;
+}
+
+.pop-up input::placeholder {
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.pop-up input::-webkit-input-placeholder {
+    text-transform: uppercase;
+     opacity: 1;
+}
+
+.pop-up input::-moz-placeholder {
+    text-transform: uppercase;
+     opacity: 1;
+}
+
+.pop-up input:-moz-placeholder {
+    text-transform: uppercase;
+     opacity: 1;
+}
+
+.pop-up input:-ms-input-placeholder {
+    text-transform: uppercase;
+     opacity: 1;
+}
+
+.pop-up input:focus {
+    border: 2px solid #663d15;
+}
+
+.pop-up .icon-login {
+    background: url(../img/User%20copy%202.png) no-repeat 95% 15px;
+}
+
+.pop-up .icon-password {
+    background: url(../img/Locked%202.png) no-repeat 95% 15px;
+}
+
+.pop-up .restore {
+    float: right;
+    color: #000000;
+}
+
+.pop-up .checkbox {
+    display: none;
+}
+
+.pop-up .login-checkbox {
+    position: relative;
+    padding-left: 30px;
+}
+
+.pop-up .login-checkbox::before,
+.pop-up .login-checkbox::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+    top: 7px;
+    left: 3px;
+    display: none;
+}
+
+.pop-up .checkbox:checked~.login-checkbox::before,
+.pop-up .checkbox:checked~.login-checkbox::after {
+    display: block;
+}
+
+.pop-up .login-checkbox::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.pop-up .login-checkbox::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.pop-up .checkbox-indicator {
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+
+.modal-map {
+    width: 766px;
+    height: 561px;
+    background: url(../img/map.jpg) no-repeat;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -280px;
+    margin-left: -390px;
+    border: 7px solid #ffffff;
+    -webkit-box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.7);
+    z-index: 30;
+    display: none;
+}
+
+.modal-map-active {
+    display: block;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+.modal-overlay-active {
+    display: block;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.index-logo {
+    margin-bottom: 25px;
+    height: 204px;
+    width: 368px;
+    margin: 0 auto;
+}
+
+.index-logo img {
+    height: 204px;
+    width: 368px;
+}
+
+.features {
+    margin-bottom: 80px;
+}
+
+.features-item {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+    min-height: 175px;
+    text-align: center;
+}
+
+.features-item:last-child {
+    margin-right: 0px;
+}
+
+.features-item p {
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.features-name {
+    font-size: 30px;
+    display: block;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    line-height: 42px;
+    position: relative;
+}
+
+.features-name::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    bottom: 0px;
+    left: 50%;
+    display: block;
+    margin-left: -10px;
+}
+
+.index-content {
+    padding: 50px 80px;
+    margin-bottom: 35px;
+    background: url("../img/Layer%2017%20copy.png") no-repeat center, url("../img/barbershop-price.jpg") repeat #f6f3f0;
+    color: #000000;
+}
+
+.index-content p {
+    margin-bottom: 25px;
+}
+
+.index-content li {
+    margin-bottom: 25px;
+}
+
+.index-content-left {
+    width: 380px;
+    float: left;
+}
+
+.index-content-left p {
+    padding-right: 70px;
+}
+
+.index-content-right {
+    width: 300px;
+    float: right;
+}
+
+.index-content-title {
+    padding-bottom: 25px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.news-preview p {
+    margin-bottom: 0;
+}
+
+.news-preview time {
+    text-transform: none;
+    font-weight: normal;
+}
+
+footer {
+    padding-bottom: 40px;
+    padding-top: 60px;
+    background: url(../img/barbershop-footer.jpg) repeat #242424;
+}
+
+.footer-contacts {
+    width: 320px;
+    float: left;
+    min-height: 90px;
+    margin-right: 60px;
+}
+
+.footer-social {
+    width: 180px;
+    float: left;
+    min-height: 90px;
+    text-align: center;
+}
+
+.footer-social p {
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    margin: 0 2px;
+    font-size: 0;
+    background: url(../img/spritesheet.png) no-repeat #000000;
+    -webkit-transition: background-position 0.5s, background-color 0.5s;
+    -o-transition: background-position 0.5s, background-color 0.5s;
+    transition: background-position 0.5s, background-color 0.5s;
+}
+
+.social-btn:hover {
+    background-color: #ffffff;
+}
+
+.social-btn-vk {
+    background-position: 0px -200px;
+}
+
+.social-btn-fb {
+    background-position: 5px -120px;
+}
+
+.social-btn-inst {
+    background-position: 0px -37px;
+}
+
+.social-btn-vk:hover {
+    background-position: 0px -235px;
+}
+
+.social-btn-fb:hover {
+    background-position: 5px -160px;
+}
+
+.social-btn-inst:hover {
+    background-position: 0px -77px;
+}
+
+.footer-copyright {
+    max-width: 180px;
+    float: right;
+    min-height: 90px;
+}
+
+.footer-copyright p {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-copyright .btn {
+    margin-right: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.footer-copyright .btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.breadcrumbs {
+    min-height: 80px;
+    padding-bottom: 50px;
+}
+
+.breadcrumbs a {
+    color: #000000;
+    position: relative;
+    padding-right: 18px;
+    margin-right: 20px;
+}
+
+.breadcrumbs a::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    display: block;
+    background-color: #000000;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 20%;
+    left: 100%;
+}
+
+.breadcrumbs h1 {
+    padding-bottom: 25px;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.breadcrumbs span {
+    color: #aba9a7;
+}
+
+.gallery-content {
+    float: left;
+    width: 460px;
+}
+
+figure {
+    padding: 0px;
+    margin: 0px;
+}
+
+.gallery {
+    position: relative;
+    height: 260px;
+}
+
+.gallery .btn {
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-prev {
+    left: 0;
+}
+
+.gallery-next {
+    right: 0;
+}
+
+.gallery-content-images {
+    height: 164px;
+    display: inline-block;
+}
+
+.gallery-content-images img {
+    border: 7px solid #ffffff;
+    background-color: #cccccc;
+    vertical-align: top;
+}
+
+.gallery-content img {
+    -webkit-box-shadow: 3px 4px 15px 0px rgba(0, 1, 1, 0.8);
+    box-shadow: 3px 4px 15px 0px rgba(0, 1, 1, 0.8);
+    vertical-align: top;
+}
+
+.small-images {
+    display: inline-block;
+    margin-top: 20px;
+    height: 149px;
+}
+
+.small-image {
+    width: 460px;
+    height: 498px;
+}
+
+.small-images img:not(:first-of-type) {
+    padding-left: 20px;
+}
+
+.appointment-form input {
+    border: 2px solid #000000;
+    outline: none;
+    background-color: #f9f6f3;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-weight: bold;
+    width: 106px;
+    padding: 7px 15px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+.appointment-form input:nth-child(2n) {
+    margin-right: 0;
+}
+
+.appointment-form input::placeholder {
+    opacity: 1;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.appointment-form input::-webkit-input-placeholder {
+    opacity: 1;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.appointment-form input::-moz-placeholder {
+    opacity: 1;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.appointment-form input:-moz-placeholder {
+    opacity: 1;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.appointment-form input:-ms-input-placeholder {
+    opacity: 1;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.description {
+    float: right;
+    width: 400px;
+    padding-top: 25px;
+}
+
+.appointment-form .btn {
+    clear: both;
+    width: 100%;
+}
+
+.appointment-form input:focus {
+    border: 2px solid #663d15;
+}
+
+.description-content p {
+    padding-top: 35px;
+    padding-bottom: 38px;
+    padding-right: 11px;
+}
+
+.description-content {
+    padding-bottom: 64px;
+}
+
+.description-content .article {
+    color: #aba9a7;
+    float: right;
+    padding-right: 15px;
+}
+
+.description-content h2 {
+    padding-bottom: 33px;
+    font-size: 24px;
+}
+
+.description-content li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 7px;
+}
+
+.description-content li::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    display: block;
+    background-color: #000000;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 20%;
+    left: 1px;
+}
+
+.page-content {
+    padding-top: 55px;
+    padding-bottom: 50px;
+    color: #000000;
+    background: url("../img/barbershop-price.jpg") repeat #ffffff;
+}
+
+.title-character {
+    text-align: center;
+}
+
+.title-character h2 {
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 54px;
+    position: relative;
+    padding: 0 25px;
+    margin: 0;
+    display: inline;
+    z-index: 2;
+    background: url("../img/barbershop-price.jpg") repeat #ffffff;
+}
+
+.title-character::after {
+    content: "";
+    position: relative;
+    border: 1px solid #000000;
+    top: -25px;
+    display: block;
+    z-index: 1;
+}
+
+.title-character::before {
+    left: 0;
+}
+
+.title-character::after {
+    right: 0;
+}
+
+.character-description {
+    float: left;
+    width: 400px;
+}
+
+.character-description li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 24px;
+}
+
+.character-description li::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    display: block;
+    background-color: #000000;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 20%;
+    left: 1px;
+}
+
+.character-information {
+    float: right;
+    width: 470px;
+}
+
+.prices {
+    border-collapse: collapse;
+    width: 460px;
+}
+
+.prices td {
+    border: 2px solid #000000;
+    vertical-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.prices .name {
+    padding-left: 20px;
+}
+
+.prices .value {
+    padding-left: 90px;
+}
+
+.character h2 {
+    padding-bottom: 35px;
+    font-size: 24px;
+}
+
+.page-content .character:first-of-type {
+    padding-top: 57px;
+    padding-bottom: 65px;
+}
+
+.page-content .character:last-of-type {
+    padding-bottom: 30px;
+}
+
+.list-items {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.filter-items-left {
+    float: left;
+    width: 220px;
+}
+
+.seller-items {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.seller-items legend {
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 28px;
+}
+
+.seller-items li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 17px;
+}
+
+.filter-items-right {
+    width: 700px;
+    float: right;
+    background-color: peachpuff;
+}
+
+.pages {
+    margin-top: 25px;
+}
+
+.item {
+    width: 220px;
+    float: left;
+    min-height: 288px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 3px 4px 15px 0px rgba(0, 1, 1, 0.8);
+    box-shadow: 3px 4px 15px 0px rgba(0, 1, 1, 0.8);
+}
+
+.item img {
+    vertical-align: top;
+}
+
+.item span {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    text-transform: none;
+}
+
+.name-items {
+    padding-left: 13px;
+    padding-bottom: 13px;
+}
+
+.item .name-item {
+    text-transform: uppercase;
+}
+
+.name-items span {
+    display: block;
+}
+
+a,
+button {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #000000;
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 33px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: top;
+    -webkit-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+    background-color: #000000;
+}
+
+.price {
+    background-color: #aba9a7;
+    display: inline-block;
+    padding: 10px 0px;
+    color: #000000;
+    vertical-align: top;
+    margin-right: -4px;
+    min-width: 110px;
+    text-align: center;
+}
+
+.btn-shop {
+    min-width: 78px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.good-price span {
+    margin-left: 17px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.pages .btn {
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+
+.active {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.active:hover {
+    cursor: default;
+    background-color: #ffffff;
+}
+
+.active-page {
+    position: relative;
+    background-color: transparent;
+}
+
+.active-page a:hover {
+    background: none;
+}
+
+.active-page::after {
+    position: absolute;
+    content: "";
+    background-color: #ffffff;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    height: 5px;
+}
+
+.seller-items input[type="checkbox"]:hover~label {
+    color: #663d15;
+}
+
+.seller-items input[type="radio"]:hover~label {
+    color: #663d15;
+}
+
+.seller-items input[type="checkbox"]:disabled~label {
+    color: #aba9a7;
+}
+
+.seller-items input[type="radio"]:disabled~label {
+    color: #aba9a7;
+}
+
+.seller-items input {
+    display: none;
+}
+
+.seller-items label {
+    position: relative;
+    padding-left: 40px;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.seller-items label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000000;
+    top: 0;
+    left: 0px;
+}
+
+.item-group legend {
+    padding-top: 35px;
+}
+
+.item-group label::before {
+    border-radius: 50%;
+}
+
+.seller-items label::after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 20px;
+    height: 20px;
+    background: url(../img/Layer%2029%20copy%203.png) no-repeat 5px 5px;
+    top: 0;
+    left: 0;
+}
+
+.item-group label::after {
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    top: 6px;
+    left: 6px;
+}
+
+.seller-items input:checked~label::after {
+    display: block;
+}
+
+.filter-items-left button[type="submit"] {
+    margin-top: 40px;
+}
