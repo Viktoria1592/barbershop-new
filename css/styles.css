@@ -9,6 +9,13 @@ body {
     font-family: "PT Sans Narrow", "Arial", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1,
@@ -260,22 +267,22 @@ header {
 
 .pop-up input::-webkit-input-placeholder {
     text-transform: uppercase;
-     opacity: 1;
+    opacity: 1;
 }
 
 .pop-up input::-moz-placeholder {
     text-transform: uppercase;
-     opacity: 1;
+    opacity: 1;
 }
 
 .pop-up input:-moz-placeholder {
     text-transform: uppercase;
-     opacity: 1;
+    opacity: 1;
 }
 
 .pop-up input:-ms-input-placeholder {
     text-transform: uppercase;
-     opacity: 1;
+    opacity: 1;
 }
 
 .pop-up input:focus {
